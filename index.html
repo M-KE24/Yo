@@ -1,3 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+<title>HONOR TV</title>
+<script disable-devtool-auto src='disable-devtool@latest">https://cdn.jsdelivr.net/npm/disable-devtool@latest'></script>
+<style>
+  body {
+    display: none;
+  }
+</style>
+</head>
+<body>
+<script>
+document.addEventListener('contextmenu', (e) => e.preventDefault());
+function ctrlShiftKey(e, keyCode) {
+    return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0);
+    }
+document.onkeydown = (e) => {
+    if (
+        e.keyCode === 123 ||
+        ctrlShiftKey(e, 'I') ||
+        ctrlShiftKey(e, 'J') ||
+        ctrlShiftKey(e, 'C') ||
+        (e.ctrlKey && e.keyCode === 'U'.charCodeAt(0))
+        )
+        return false;
+};
+</script>
+</body>
+</html>
+
 #EXTM3U url-tvg="https://raw.githubusercontent.com/AqFad2811/epg/main/astro.xml, https://raw.githubusercontent.com/AqFad2811/epg/main/epg.xml, https://raw.githubusercontent.com/azimabid00/epg/main/unifi_epg.xml, https://raw.githubusercontent.com/AqFad2811/epg/main/rtmklik.xml, https://raw.githubusercontent.com/AqFad2811/epg/main/singapore.xml, https://raw.githubusercontent.com/matthuisman/i.mjh.nz/69991f177ec4798204c742550adaef4ca2891a9f/Plex/us.xml, https://raw.githubusercontent.com/matthuisman/i.mjh.nz/9623e757d2cfa323f0108b87871b0e6ab9661129/SamsungTVPlus/gb.xml, https://epgshare01.online/epgshare01/epg_ripper_PLEX1.xml.gz, https://www.bevy.be/bevyfiles/indiapremium1.xml, https://i.mjh.nz/SamsungTVPlus/us.xml, https://raw.githubusercontent.com/azimabid00/epg/main/astro_epg.xml, https://i.mjh.nz/SamsungTVPlus/gb.xml" vod_library="https://json.link/V9uF1wdElk.json" refresh="3600" billed-msg="WELCOME TO VIP PLAYLIST"
 
 #EXTINF:-1 tvg-id="" tvg-logo="https://static.wikia.nocookie.net/bigbrother/images/9/9b/Pinoy_Big_Brother_2021_logo.jpg/revision/latest?cb=20211024232220" channel-number="44" group-title="🇵🇭 LOCAL CHANNEL", PBB ALL-ACCESS LIVE STREAM not/247
