@@ -201,42 +201,6 @@
 .nav-item:hover i {
   transform: scale(1.4); /* Enlarge the icon */
 }
-
-.more-links {
-  display: none;
-  position: absolute;
-  bottom: 80px;
-  left: 0;
-  right: 0;
-  background-color: #1a1a1a; /* Dark background */
-  padding: 10px;
-  border: 1px solid #333; /* Darker border for contrast */
-  z-index: 1001;
-  opacity: 0;
-  transform: translateY(30px); /* More exaggerated start position */
-  transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
-}
-
-.more-links a {
-  display: block;
-  color: #e0e0e0; /* Light gray for links */
-  padding: 3px 0;
-  text-decoration: none;
-  text-align: center;
-  transition: color 0.3s ease-in-out, transform 0.3s, text-shadow 0.3s ease-in-out; /* Added text-shadow transition */
-}
-
-.more-links a:hover {
-  color: #ffffff; /* Light teal color on hover */
-  transform: scale(1.05); /* Slight scaling for links */
-  text-shadow: 0 0 8px rgba(255, 255, 255, 0.8), 0 0 16px rgba(255, 255, 255, 0.6); /* Normal white glow effect */
-}
-
-.more-links.show {
-  display: block;
-  opacity: 1;
-  transform: translateY(0);
-}
   </style>
 </head>
 <body>
@@ -1034,7 +998,6 @@
 
     document.addEventListener("DOMContentLoaded", initializeUI);
   </script>
-</script>
 <script src="load.js"></script>
 <script>function isInViewport(e){const t=e.getBoundingClientRect();return t.top>=0&&t.left>=0&&t.bottom<=(window.innerHeight||document.documentElement.clientHeight)&&t.right<=(window.innerWidth||document.documentElement.clientWidth)}function loadImages(){document.querySelectorAll(".defer-image").forEach(e=>{if(isInViewport(e)){const t=e.getAttribute("data-src");if(t){const n=new Image;n.src=t,n.onload=()=>{e.setAttribute("src",t),e.classList.remove("defer-image")}}}})}window.addEventListener("scroll",loadImages),window.addEventListener("resize",loadImages),loadImages();</script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
