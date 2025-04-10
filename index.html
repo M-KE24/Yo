@@ -3,6 +3,115 @@
 <head>
 <title>HONOR TV</title>
 </head>
-<body><span style="color:#FF0000">C</span><span style="color:#FF5100">O</span><span style="color:#FFA100">M</span><span style="color:#FFF200">I</span><span style="color:#BCFF00">N</span><span style="color:#6BFF00">G</span> <span style="color:#1BFF00">S</span><span style="color:#00FF36">O</span><span style="color:#00FF86">O</span><span style="color:#00FFD7">N</span> <span style="color:#00D7FF">I</span><span style="color:#0086FF">N</span> <span style="color:#0036FF">H</span><span style="color:#1B00FF">O</span><span style="color:#6B00FF">N</span><span style="color:#BC00FF">O</span><span style="color:#FF00F2">R</span> <span style="color:#FF00A1">T</span><span style="color:#FF0051">V</span>
+ <div class="rainbow-text">
+    <span class="block-line"><span><span style="color:#ff0000">C</span><span style="color:#ff1100">O</span><span style="color:#ff2200">M</span><span style="color:#ff3300">I</span><span style="color:#ff4400">N</span><span style="color:#ff5500">G&nbsp;</span></span><span><span style="color:#ff6600">S</span><span style="color:#ff7700">O</span><span style="color:#ff8800">O</span><span style="color:#ff9900">N</span></span></span>
+</div>
+ <html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Honor TV
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+ </head>
+ <body class="flex items-center justify-center min-h-screen bg-white">
+  <div class="flex flex-col items-center justify-center bg-white rounded-lg p-4 shadow-lg">
+   <div class="relative">
+    <img alt="TV icon with antennas and the text 'TV' inside a red and blue outline, with 'HONOR TV' written below" class="w-48 h-48" height="192" src="https://storage.googleapis.com/a1aa/image/OInCUuiFRD36dEDZmldi2fnr-Hw9LYRvJvI4CycCmXM.jpg" width="192"/>
+    <div class="absolute inset-0 flex flex-col items-center justify-center">
+     <div class="text-6xl font-bold text-blue-500">
+      TV
+     </div>
+    </div>
+   </div>
+   <div class="mt-2 text-xl font-semibold text-gray-700">
+    HONOR TV
+   </div>
+  </div>
+ </body>
+</html>
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(skyblue,skyblue , skyblue , skyblue , skyblue , skyblue);
+      color: #ba0404;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      }
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-around;
+  background-color: #10013d; /* Dark background */
+  padding: 5px;
+  border-top: 2px solid #333; /* Darker border for contrast */
+  z-index: 1000;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.nav-item {
+  color: #07ded7; /* Light gray text for better contrast */
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+  flex-grow: 1;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out, text-shadow 0.3s ease-in-out; /* Added text-shadow transition */
+  position: relative;
+}
+
+.nav-item i {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 5px;
+  transition: transform 0.2s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Smooth bounce effect */
+}
+
+.nav-item:hover {
+  color: #a80306; /* Change color to normal white on hover */
+  transform: scale(1.1);
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.8), 0 0 16px rgba(255, 255, 255, 0.6); /* Normal white glow effect */
+}
+
+.nav-item:hover i {
+  transform: scale(1.4); /* Enlarge the icon */
+}
+ .rainbow-text {
+    font-family: Arial Black, Gadget, sans-serif;
+    text-align: center;
+    font-weight: bold;
+    font-size: 77px;
+    text-shadow: #A3A3A3 1px 1px 0px;
+}
+.rainbow-text .block-line > span {
+    display: inline-block;
+}       
+  </style>
+<body>
+
+
+<script src="load.js"></script>
+<script>function isInViewport(e){const t=e.getBoundingClientRect();return t.top>=0&&t.left>=0&&t.bottom<=(window.innerHeight||document.documentElement.clientHeight)&&t.right<=(window.innerWidth||document.documentElement.clientWidth)}function loadImages(){document.querySelectorAll(".defer-image").forEach(e=>{if(isInViewport(e)){const t=e.getAttribute("data-src");if(t){const n=new Image;n.src=t,n.onload=()=>{e.setAttribute("src",t),e.classList.remove("defer-image")}}}})}window.addEventListener("scroll",loadImages),window.addEventListener("resize",loadImages),loadImages();</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<nav class="bottom-nav">
+  <a href="index.html" class="nav-item">
+    <i class="fas fa-home"></i> Home
+  </a>
+  <a href="tv.html" class="nav-item">
+    <i class="fas fa-broadcast-tower"></i> Live TV
+  </a>
+  <a href="movies.html" class="nav-item">
+    <i class="fas fa-film"></i> Movies
+  </a>
+</nav>
 </body>
 </html>
