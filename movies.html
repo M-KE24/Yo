@@ -3,7 +3,7 @@
 <head>
 <title>HONOR TV</title>
 </head>
-<body><span <div class="rainbow-text">
+ <div class="rainbow-text">
     <span class="block-line"><span><span style="color:#ff0000">C</span><span style="color:#ff1100">O</span><span style="color:#ff2200">M</span><span style="color:#ff3300">I</span><span style="color:#ff4400">N</span><span style="color:#ff5500">G&nbsp;</span></span><span><span style="color:#ff6600">S</span><span style="color:#ff7700">O</span><span style="color:#ff8800">O</span><span style="color:#ff9900">N</span></span></span>
 </div>
  <html lang="en">
@@ -44,7 +44,7 @@
       flex-direction: column;
       align-items: center;
       min-height: 100vh;
-
+      }
 .bottom-nav {
   position: fixed;
   bottom: 0;
@@ -96,10 +96,9 @@
     display: inline-block;
 }       
   </style>
-</head>
 <body>
 
-</script>
+
 <script src="load.js"></script>
 <script>function isInViewport(e){const t=e.getBoundingClientRect();return t.top>=0&&t.left>=0&&t.bottom<=(window.innerHeight||document.documentElement.clientHeight)&&t.right<=(window.innerWidth||document.documentElement.clientWidth)}function loadImages(){document.querySelectorAll(".defer-image").forEach(e=>{if(isInViewport(e)){const t=e.getAttribute("data-src");if(t){const n=new Image;n.src=t,n.onload=()=>{e.setAttribute("src",t),e.classList.remove("defer-image")}}}})}window.addEventListener("scroll",loadImages),window.addEventListener("resize",loadImages),loadImages();</script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -116,4 +115,3 @@
 </nav>
 </body>
 </html>
-
