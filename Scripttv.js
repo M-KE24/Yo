@@ -119,3 +119,10 @@ const categories = [
 .nav-item:hover i {
   transform: scale(1.4); /* Enlarge the icon */
 }
+
+fetch("channels.json")
+  .then((response) => response.json())
+  .then((data) => {
+    channelsData = data;
+    renderChannels(channelsData);
+  })
