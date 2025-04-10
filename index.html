@@ -160,54 +160,6 @@
     #footer a:hover {
       text-decoration: underline;
     }
-      
-
-.bottom-nav {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-  justify-content: space-around;
-  background-color: #1a1a1a;
-  padding: 6px 0;
-  border-top: 2px solid #333;
-  z-index: 1000;
-  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-.bottom-nav:hover {
-  background-color: #2a2a2a;
-  box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.4);
-}
-
-.nav-item {
-  color: #e0e0e0;
-  text-align: center;
-  text-decoration: none;
-  font-size: 14px;
-  flex-grow: 1;
-  position: relative;
-  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
-  animation: pulse 1.5s infinite;
-}
-
-.nav-item i {
-  display: block;
-  font-size: 18px;
-  margin-bottom: 4px;
-  transition: transform 0.3s ease;
-}
-
-.nav-item:hover {
-  color: #ffffff;
-  transform: scale(1.1);
-  text-shadow: 0 0 8px rgba(255, 255, 255, 0.8), 0 0 16px rgba(255, 255, 255, 0.6);
-}
-
-.nav-item:hover i {
-  transform: scale(1.4);
-}
   </style>
 </head>
 <body>
@@ -1013,26 +965,20 @@
   <a href="index.html" class="nav-item">
     <i class="fas fa-home"></i> Home
   </a>
-  <a href="tvplus.html" class="nav-item">
+  <a href="index.html" class="nav-item">
     <i class="fas fa-broadcast-tower"></i> Live TV
   </a>
   <a href="movies.html" class="nav-item">
     <i class="fas fa-film"></i> Movies
   </a>
   <a href="shows.html" class="nav-item">
-    <i class="fas fa-tv"></i> Shows
+    <i class="fas fa-tv"></i> Soon
   </a>
   <a href="trailer.html" class="nav-item">
-    <i class="fas fa-video"></i> Trailers
-  </a>
-  <a href="#" class="nav-item" id="more-menu">
-    <i class="fas fa-ellipsis-h"></i> More
+    <i class="fas fa-video"></i> Soon
   </a>
 </nav>
 <script>
-document.addEventListener("DOMContentLoaded",function(){const e=document.getElementById("more-menu"),t=document.getElementById("more-links");e.addEventListener("click",function(e){e.preventDefault(),t.classList.toggle("show")})});
-</script>
-<script type='text/javascript' src='//perilastronaut.com/4a/56/8a/4a568a636496ba88af9fcab657ba2e49.js'></script>
 
 </body>
 </html>
