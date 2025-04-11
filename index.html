@@ -1,90 +1,27 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta property="og:title" content="HONOR TV">
-  <meta property="og:description" content="ENJOY WATCHING CABLE TV AND MOVIES SERIES">
-  <meta property="og:image" content="https://honortv.netlify.app/image/logo.png"> <!-- Change this to an actual image URL -->
-  <meta property="og:url" content="https://honortv.netlify.app">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap" rel="stylesheet">
   <title>HONOR TV</title>
-  <link rel="stylesheet" href="stylehome.css">
-</head>
-<body>
-  <div class="container">
-    <h1>☠️ HONOR TV</h1>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/shaka-player@latest/dist/controls.css">
+  <script src="https://cdn.jsdelivr.net/npm/shaka-player@latest/dist/shaka-player.ui.debug.js"></script>
 
-    <div class="hamburger-menu" onclick="toggleSidebar()">
-      <div class="bar bar-1"></div>
-      <div class="bar bar-2"></div>
-      <div class="bar bar-3"></div>
-    </div>    
-  
-    <div class="layout">
-      <!-- Sidebar (Now on the right side) -->
-      <div class="sidebar">
-        <h2>Honortv Navigation</h2>
-        <ul>
-          <li><a href="https://honortv.netlify.app">Home</a></li>
-          <li><a href="https://honortv.netlify.app/tv.html">Live TV</a></li>
-          <li><a href="https://honortv.netlify.app/movies.html">Movies</a></li>
-          <li><a href="https://www.facebook.com/share/1JYJmBtfFB/"></a>FACEBOOK</li>
-          <li><a href="https://t.me/+piweRp-NuSwwOTll">Telegram Group</a></li>
-        </ul>
-      </div>
-    
-      <div class="container">
-        <!-- Your existing content goes here -->
-      </div>
-    </div>
-    
-    <!-- Add this below your existing content -->
-    <div id="greeting"></div>
-<div id="piracy-quote"></div>
-
-    <div class="section">
-      <h2>RECOMMENDED</h2>
-      <div class="channel-row">
-        <a href="https://www.miruro.tv" target="_blank" class="channel-card">
-          <img src="https://www.miruro.tv/icon-512x512.png" alt="miruro">
-        </a>        
-        <a href="https://hianime.nz" target="_blank" class="channel-card">
-          <img src="https://hianime.nz/images/logo.png?v=0.1" alt="HiAnime">
-        </a>
-        <a href="https://kuroiru.co" target="_blank" class="channel-card">
-          <img src="https://kuroiru.co/logo/stuff/letter-small.png" alt="Kuroiru">
-        </a>
-        <a href="https://gojo.wtf" target="_blank" class="channel-card">
-          <img src="https://gojo.wtf/android-chrome-512x512.png" alt="Gojo">
-        </a>
-        <a href="https://kaa.mx" target="_blank" class="channel-card">
-          <img src="https://kaa.mx/img/logo.png" alt="KickAssAnime">
-        </a>
-        <a href="https://hikari.gg" target="_blank" class="channel-card">
-          <img src="https://hikari.gg/assets/logo-CP3fZ956.webp" alt="Hikari">
-        </a>
-        <a href="https://aniwatchtv.to" target="_blank" class="channel-card">
-          <img src="https://aniwatchtv.to/images/logo.png" alt="Aniwatch">
-        </a>
-        <a href="https://gogoanime.org.vc" target="_blank" class="channel-card">
-          <img src="https://gogoanime.org.vc/wp-content/uploads/2024/12/logo-26.png" alt="Gogoanime">
-        </a>
-      </div>
-    </div>
-
-
-<div id="pirate-snow"></div>
-
-<div class="floating-notification" id="notification">
-  <button class="close-btn" onclick="closeNotification()">×</button>
-  <p>
-    <strong>JOIN TO OUR REDDIT 🎉</strong> – Be part of the community!
-    <a href="https://www.reddit.com/r/PirataList/" target="_blank">Click here</a>
-  </p>
-</div>
-  
-  <script src="snow1.js"></script>
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+<script src="stylehome.css"></script>
+<script>function isInViewport(e){const t=e.getBoundingClientRect();return t.top>=0&&t.left>=0&&t.bottom<=(window.innerHeight||document.documentElement.clientHeight)&&t.right<=(window.innerWidth||document.documentElement.clientWidth)}function loadImages(){document.querySelectorAll(".defer-image").forEach(e=>{if(isInViewport(e)){const t=e.getAttribute("data-src");if(t){const n=new Image;n.src=t,n.onload=()=>{e.setAttribute("src",t),e.classList.remove("defer-image")}}}})}window.addEventListener("scroll",loadImages),window.addEventListener("resize",loadImages),loadImages();</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<nav class="bottom-nav">
+  <a href="index.html" class="nav-item">
+    <i class="fas fa-home"></i> Home
+  </a>
+  <a href="tv.html" class="nav-item">
+    <i class="fas fa-broadcast-tower"></i> Live TV
+  </a>
+  <a href="movies.html" class="nav-item">
+    <i class="fas fa-film"></i> Movies
+  </a>
+</nav>
 </body>
 </html>
