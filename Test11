@@ -1,0 +1,32 @@
+addEventListener("fetch", event => {
+    event.respondWith(handleRequest(event.request));
+});
+
+async function handleRequest(request) {
+    const streamURL = "https://raw.githubusercontent.com/Mikeangelo24/mikeph.github.io/refs/heads/main/playlist.html"; // Replace with your actual IPTV link
+
+    try {
+        const response = await fetch(streamURL, {
+            headers: {
+                "User-Agent": "Mozilla/5.0",
+                "Cache-Control": "no-cache"
+            }
+        });
+
+        if (!response.ok) {
+            return new Response(`Error fetching stream: ${response.statusText}`, {
+                status: response.status,
+                headers: { "Content-Type": "text/plain" }
+            });
+        }
+
+        return new Response(response.body, {
+            status: 200,
+            headers: { "Content-Type": "application/vnd.apple.mpegurl" }
+        });
+
+    } catch (error) {
+        return new Response(`Internal Server Error: ${error.message}`, {
+            status: 500,
+            headers: { "Content-Type": "text/plain" }
+        });
