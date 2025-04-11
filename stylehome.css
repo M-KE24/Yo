@@ -1,0 +1,369 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #000; /* Black background for the whole page */
+  color: rgb(255, 255, 255);
+  background-image: linear-gradient(to right, #070707 1px, transparent 1px), 
+                    linear-gradient(to bottom, #070707 1px, transparent 1px);
+  background-size: 100px 100px; /* Larger boxes: 100px by 100px */
+  background-position: 0 0, 0 0; /* Align both gradients */
+}
+
+  .container {
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 30px;
+  }
+  
+  .container h1 {
+    text-align: center;
+  }
+  
+  .dropdown {
+    background-color: #222;
+    color: white;
+    padding: 10px;
+    margin-bottom: 30px;
+    border: none;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .section {
+    margin-bottom: 40px;
+  }
+  
+  .section h2 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+  }
+  
+  /* Default: grid view */
+  .channel-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+  }
+  
+  .channel-card {
+    background-color: #333232;
+    padding: 20px;
+    width: 140px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .channel-card:hover {
+    background-color: #333;
+  }
+  
+  /* Scrollbar tweaks */
+  .channel-row::-webkit-scrollbar {
+    height: 8px;
+  }
+  .channel-row::-webkit-scrollbar-thumb {
+    background: #444;
+    border-radius: 4px;
+  }
+  .channel-row::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  /* Responsive carousel for tablets and phones */
+  @media (max-width: 768px) {
+    .channel-row {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-color: #444 transparent;
+      scroll-snap-type: x mandatory;
+      padding-bottom: 5px;
+    }
+  
+    .channel-card {
+      flex: 0 0 auto;
+      scroll-snap-align: start;
+      width: 120px;
+      height: 70px;
+      font-size: 0.9rem;
+    }
+  }
+  
+  /* Extra mobile tuning */
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 1.5rem;
+    }
+  
+    .section h2 {
+      font-size: 1.1rem;
+    }
+  
+    .channel-card {
+      width: 110px;
+      height: 60px;
+      font-size: 0.85rem;
+    }
+  }
+
+  .channel-card img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+  
+  .floating-notification {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #b6b5b53b;
+    color: white;
+    padding: 14px 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 14px;
+    text-align: center;
+    width: auto;
+    max-width: 90%;
+    animation: fadeSlideUp 0.6s ease;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* for Safari */
+  }
+  
+  .floating-notification p {
+    margin: 0;
+    line-height: 1.4;
+  }
+  
+  .floating-notification a {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  
+  @keyframes fadeSlideUp {
+    from {
+      opacity: 0;
+      transform: translateX(-50%) translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .floating-notification {
+      font-size: 13px;
+      padding: 12px 16px;
+    }
+  }
+
+  #pirate-snow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+  }
+  
+  .pirate-emoji {
+    position: absolute;
+    top: -50px;
+    font-size: 24px;
+    animation: fall linear forwards;
+    color: white;
+  }
+  
+  @keyframes fall {
+    0% {
+      transform: translateY(-50px) rotate(0deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(100vh) rotate(360deg);
+      opacity: 0;
+    }
+  }
+  
+  #piracy-quote {
+    font-style: italic;
+    color: #fff;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 8px;
+  }
+  
+  #greeting {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: #f8f8f8;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    text-transform: capitalize;
+  }
+
+/* Hide the scrollbar, but allow scrolling */
+body {
+  overflow: hidden; /* Prevent the scrollbar from showing */
+}
+
+body, html {
+  height: 100%;
+  overflow-y: scroll; /* Ensure scrolling still works, but no visible scrollbar */
+  -ms-overflow-style: none;  /* For Internet Explorer and Edge */
+  scrollbar-width: none; /* For Firefox */
+}
+
+body::-webkit-scrollbar {
+  display: none; /* Hide the scrollbar in Webkit browsers (Chrome, Safari) */
+}
+
+.close-btn {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: color 0.2s ease;
+}
+
+.close-btn:hover {
+  color: #ff4e4e;
+}
+
+/* Hamburger menu icon */
+.hamburger-menu {
+  position: fixed;
+  top: 20px;
+  right: 20px; /* Position it on the right side */
+  z-index: 9999; /* Ensure the hamburger is always on top */
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 25px;
+  transition: transform 0.3s ease;
+}
+
+/* Bars of the hamburger menu */
+.hamburger-menu .bar {
+  width: 30px;
+  height: 5px;
+  background-color: #fff;
+  border-radius: 5px;
+  transition: all 0.3s ease; /* Smooth transition for the bar transformation */
+}
+
+/* When the menu is toggled to 'X' */
+.hamburger-menu.active .bar-1 {
+  transform: rotate(45deg); /* First bar rotates to form X */
+  position: relative;
+  top: 10px;
+}
+
+.hamburger-menu.active .bar-2 {
+  opacity: 0; /* Hide the middle bar */
+}
+
+.hamburger-menu.active .bar-3 {
+  transform: rotate(-45deg); /* Third bar rotates to form X */
+  position: relative;
+  top: -10px;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  width: 220px;
+  background-color: rgba(0, 0, 0, 0.986); /* Semi-transparent black background */
+  background-size: cover;
+  color: #f4e2c2;
+  padding: 20px;
+  min-height: 100vh;
+  font-family: 'Pirata One', fantasy, serif;
+  position: fixed;
+  top: 0;
+  right: -220px; /* Sidebar hidden initially to the right */
+  transition: right 0.3s ease; /* Animates from right */
+  box-shadow: -5px 0 10px rgb(0, 0, 0); /* Adds shadow to the left */
+  z-index: 9998; /* Set the sidebar's z-index lower than the hamburger menu */
+}
+
+/* Show the sidebar */
+.sidebar.show {
+  right: 0;
+}
+
+/* Content layout */
+.layout {
+  display: flex;
+  transition: margin-right 0.3s ease;
+}
+
+.layout .container {
+  flex: 1;
+  padding: 20px;
+  margin-right: 220px; /* Shift content when sidebar is visible */
+}
+
+.layout .container.shift {
+  margin-right: 0; /* When sidebar is hidden, content returns to normal */
+}
+
+/* For mobile: Hide the sidebar on smaller screens */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px;
+  }
+
+  .layout .container {
+    margin-right: 0;
+  }
+
+  .layout .container.shift {
+    margin-right: 0;
+  }
+}
+
+/* Sidebar links styling */
+.sidebar ul li a {
+  color: white; /* Make links text white */
+  text-decoration: none; /* Remove underline from links */
+  padding: 10px 0;
+  display: block; /* Block level for full-width click area */
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the links */
+.sidebar ul li a:hover {
+  padding-left: 10px; /* Optional: Add padding on the left for a slight effect */
+}
+
+.container h1 {
+  font-family: 'Pirata One', fantasy, serif;
+  color: #f4e2c2;
+}
