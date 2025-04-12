@@ -1,3 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+<title>HONOR TV</title>
+<script disable-devtool-auto src='disable-devtool@latest">https://cdn.jsdelivr.net/npm/disable-devtool@latest'></script>
+<style>
+  body {
+    display: none;
+  }
+  document.addEventListener('contextmenu', (e) => e.preventDefault());
+function ctrlShiftKey(e, keyCode) {
+    return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0);
+    }
+document.onkeydown = (e) => {
+    if (
+        e.keyCode === 123 ||
+        ctrlShiftKey(e, 'I') ||
+        ctrlShiftKey(e, 'J') ||
+        ctrlShiftKey(e, 'C') ||
+        (e.ctrlKey && e.keyCode === 'U'.charCodeAt(0))
+        )
+        return false;
+    }
+document.onkeydown = function(e) {
+    if(e.keyCode == 123) {
+     return false;
+    }
+    if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){
+     return false;
+    }
+    if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){
+     return false;
+    }
+    if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)){
+     return false;
+    }
+
+    if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)){
+     return false;
+    }      
+}
+</style>
+</head>
+<body>
+<script>
 addEventListener("fetch", event => {
     event.respondWith(handleRequest(event.request));
 });
