@@ -1,0 +1,256 @@
+:root {
+  --primary-color: #1d428a; /* NBA blue */
+  --secondary-color: #e50914; /* NBA red */
+  --dark-color: #0c2340;
+  --light-color: #f8f9fa;
+  --text-color: #333;
+  --text-light: #fff;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 50px;
+  padding-top: 100px;
+}
+
+.swiper-container {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.swiper-wrapper {
+  width: 100%;
+  display: flex;
+  padding: 20px 0;
+}
+
+#swiper-slider {
+  position: relative;
+  background: linear-gradient(135deg, var(--dark-color), var(--primary-color));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  margin: 0 auto;
+  padding: 20px 15px;
+  text-align: center;
+  color: var(--text-light);
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  min-height: 250px;
+  transition: transform 0.3s;
+}
+
+#swiper-slider:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.games-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #fff;
+  position: relative;
+  display: inline-block;
+  /* margin-bottom: 20px; */
+}
+
+.games-title::after {
+  content: "";
+  display: block;
+  width: 50px; /* Adjust width as needed */
+  height: 4px; /* Line thickness */
+  background: #e50914; /* Accent color */
+  margin-top: 5px;
+  border-radius: 2px;
+}
+
+.team-name {
+  font-size: 1rem;
+  margin: 8px 0;
+  font-weight: 500;
+}
+
+#loading {
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  padding: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Team logo image styling */
+.team-logo {
+  width: 70px;
+  height: 70px;
+  margin: 0 10px;
+  object-fit: contain;
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.teams-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.vs {
+  font-weight: bold;
+  margin: 0 10px;
+  font-size: 1.2rem;
+}
+
+.game-info {
+  width: 100%;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.game-time {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.game-status {
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.score {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.no-games {
+  color: var(--text-color);
+  font-size: 1.1rem;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.retry-btn {
+  background: var(--secondary-color);
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.retry-btn:hover {
+  opacity: 0.9;
+}
+
+.live-game {
+  border: 2px solid #ff0000;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+}
+
+.game-status.live {
+  color: #ff0000;
+  font-weight: bold;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1200px) {
+  #swiper-slider {
+    min-height: 220px;
+  }
+}
+
+@media (max-width: 992px) {
+  #swiper-slider {
+    min-height: 200px;
+    padding: 15px 10px;
+  }
+
+  .team-logo {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+    padding-top: 70px;
+  }
+
+  #swiper-slider {
+    min-height: 180px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .team-logo {
+    width: 50px;
+    height: 50px;
+  }
+
+  .games-title {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 576px) {
+  #swiper-slider {
+    min-height: 160px;
+    padding: 10px 5px;
+  }
+
+  .team-logo {
+    width: 50px;
+    height: 50px;
+  }
+
+  .games-title {
+    font-size: 1.4rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  .vs {
+    font-size: 1rem;
+  }
+}
