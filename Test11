@@ -3,7 +3,7 @@ addEventListener("fetch", event => {
 });
 
 async function handleRequest(request) {
-    const streamURL = "https://raw.githubusercontent.com/Mikeangelo24/mikeph.github.io/refs/heads/main/playlist.html"; // Replace with your actual IPTV link
+    const streamURL = "https://raw.githubusercontent.com/Mikeangelo24/mikeph.github.io/refs/heads/main/playlist.m3u8"; // Replace with your actual IPTV link
 
     try {
         const response = await fetch(streamURL, {
