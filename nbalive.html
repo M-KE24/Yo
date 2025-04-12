@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Binge-Mo || NBA Schedule</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="nba.css" />
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="swiper@11/swiper-bundle.min.css">https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script type="text/javascript" data-cfasync="false">
+      /*<![CDATA[/* */
+      (function () {
+        var z = window,
+          k = "c9e30adcab1db98a49e792c4624db298",
+          j = [
+            ["siteId", 358 + 252 * 479 + 5062483],
+            ["minBid", 0.001],
+            ["popundersPerIP", "0"],
+            ["delayBetween", 60],
+            ["default", false],
+            ["defaultPerDay", 0],
+            ["topmostLayer", "auto"],
+          ],
+          g = [
+            "d3d3LmNkbjRhZHMuY29tL3Rqc3RyZWUubWluLmNzcw==",
+            "ZDNnNW92Zm5nanc5YncuY2xvdWRmcm9udC5uZXQvZFUveWpzc2lwLm1pbi5qcw==",
+            "d3d3LmRva3B6aHptcWh5cXguY29tL2lqc3RyZWUubWluLmNzcw==",
+            "d3d3LnBtdnd1eGRscC5jb20vTmtsL2tqc3NpcC5taW4uanM=",
+          ],
+          n = -1,
+          v,
+          i,
+          w = function () {
+            clearTimeout(i);
+            n++;
+            if (g[n] && !(1770282488000 < new Date().getTime() && 1 < n)) {
+              v = z.document.createElement("script");
+              v.type = "text/javascript";
+              v.async = !0;
+              var b = z.document.getElementsByTagName("script")[0];
+              v.src = "https://" + atob(g[n]);
+              v.crossOrigin = "anonymous";
+              v.onerror = w;
+              v.onload = function () {
+                clearTimeout(i);
+                z[k.slice(0, 16) + k.slice(0, 16)] || w();
+              };
+              i = setTimeout(w, 5e3);
+              b.parentNode.insertBefore(v, b);
+            }
+          };
+        if (!z[k]) {
+          try {
+            Object.freeze((z[k] = j));
+          } catch (e) {}
+          w();
+        }
+      })();
+      /*]]>/* */
+    </script>
+  </head>
+  <body id="nba-page">
+    <header id="titulo">
+      <nav class="navbar">
+        <div class="navbar-brand">
+          <a class='logo' href="/">
+            <img
+              src="images/logobgresize.png"
+              alt="logo"
+              class="logo-img"
+            />Binge-Mo
+          </a>
+          <ul class="navbar-links">
+            <li><a class='navbar-link' href="/">Home</a></li>
+            <li><a class='navbar-link' href="/movies">Movies</a></li>
+            <li><a class='navbar-link' href="/tv-shows">TV Shows</a></li>
+            <li><a class='navbar-link' href="/kids">Kids</a></li>
+            <li><a class='navbar-link' href="/nbalive">NBA Live</a></li>
+          </ul>
+          <a href="https://www.buymeacoffee.com/itsmewalnut" target="_blank"
+            ><img src="images/coffee.png" alt="Buy Me A Coffee" class="coffee"
+          /></a>
+        </div>
+        <div class="navbar-actions">
+          <a class='search-btn' href="/search"><i class="bi bi-search"></i
+          ></a>
+        </div>
+      </nav>
+    </header>
+    <div class="container">
+      <div class="swiper-container">
+        <h2 class="games-title">Yesterday's Games</h2>
+        <div class="swiper mySwiper2">
+          <div class="swiper-wrapper" id="yesterday-games"></div>
+        </div>
+      </div>
+      <div class="swiper-container">
+        <h2 class="games-title">Today's Games</h2>
+        <div class="swiper mySwiper2">
+          <div class="swiper-wrapper" id="today-games"></div>
+        </div>
+      </div>
+      <div class="swiper-container" id="kidsmobile">
+        <h2 class="games-title">Tomorrow's Games</h2>
+        <div class="swiper mySwiper1">
+          <div class="swiper-wrapper" id="tommorow-games"></div>
+        </div>
+      </div>
+      <div id="loading" class="hidden">Loading NBA games...</div>
+    </div>
+    <footer id="footer">
+      <p>© <span id="currentYear"></span> Binge-Mo. All Rights Reserved.</p>
+    </footer>
+    <!-- Mobile Navigation Icons -->
+    <div class="navbar-mobile">
+      <a class='navbar-icon' href="/"><i class="bi bi-house-door"></i>
+        <p>Home</p></a
+      >
+      <a class='navbar-icon' href="/movies"><i class="bi bi-tv"></i>
+        <p>Movies</p></a
+      >
+      <a class='navbar-icon' href="/tv-shows"><i class="bi bi-collection-play"></i>
+        <p>TV Shows</p></a
+      >
+      <a class='navbar-icon' href="/kids"><i class="bi bi-backpack2"></i>
+        <p>Kids</p></a
+      >
+      <a class='navbar-icon' href="/nbalive"><i class="bi bi-broadcast"></i>
+        <p>Live</p></a
+      >
+      <a class='navbar-icon' href="/search"><i class="bi bi-search"></i>
+        <p>Search</p></a
+      >
+    </div>
+    <script src="backend/script.js"></script>
+    <script src="swiper@11/swiper-bundle.min.js">https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script
+      disable-devtool-auto
+      src="https://cdn.jsdelivr.net/npm/disable-devtool"
+    ></script>
+    <script
+      id="bmc-wbtn"
+      data-name="BMC-Widget"
+      data-cfasync="false"
+      src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js"
+      data-id="itsmewalnut"
+      data-description="Support me on Buy me a coffee!"
+      data-message=""
+      data-color="#e50914"
+      data-position="Left"
+      data-x_margin="18"
+      data-y_margin="18"
+    ></script>
+  </body>
+</html>
