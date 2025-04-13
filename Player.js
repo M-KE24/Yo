@@ -1,6 +1,4 @@
-    ];
-
-    const categories = [
+     const categories = [
       "Local", "Sports", "News", "Movies", "Kids", "Educational and Documentary", "Lifestyle"
     ];
 
