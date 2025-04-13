@@ -763,11 +763,7 @@ const categories = [
 
       loadStream(streams[0]); // Autoplay the first channel
     }
-fetch("Ch.json")
-  .then((response) => response.json())
-  .then((data) => {
-    channelsData = data;
-    renderChannels(channelsData);
+renderChannels(channelsData);
   })
     async function loadStream(channel) {
       const videoElement = document.getElementById("video");
