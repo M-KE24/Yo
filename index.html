@@ -7,7 +7,24 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/shaka-player@latest/dist/controls.css">
   <script src="https://cdn.jsdelivr.net/npm/shaka-player@latest/dist/shaka-player.ui.debug.js"></script>
   <link rel="stylesheet" href="stylehome.css">
+</style>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="title">🄷🄾🄽🄾🅁 🅃🅅</div>
+    <div id="video-container">
+      <iframe id="youtube-video" allowfullscreen></iframe>
+      <video id="video" controls></video>
+    </div>
 
+    <div id="categories">
+      <!-- Categories will be generated dynamically -->
+    </div>
+
+    <div id="footer">
+      ENJOY WATCHING CABLE TV BY HONOR TV
+    </div>
+  </div>
 <script src="hls.js"></script>
 <script src="Player.js"></script>
 <script>function isInViewport(e){const t=e.getBoundingClientRect();return t.top>=0&&t.left>=0&&t.bottom<=(window.innerHeight||document.documentElement.clientHeight)&&t.right<=(window.innerWidth||document.documentElement.clientWidth)}function loadImages(){document.querySelectorAll(".defer-image").forEach(e=>{if(isInViewport(e)){const t=e.getAttribute("data-src");if(t){const n=new Image;n.src=t,n.onload=()=>{e.setAttribute("src",t),e.classList.remove("defer-image")}}}})}window.addEventListener("scroll",loadImages),window.addEventListener("resize",loadImages),loadImages();</script>
