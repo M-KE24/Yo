@@ -35,15 +35,15 @@
           slider.appendChild(card);
         });
       });
+
+      loadStream(streams[0]); // Autoplay the first channel
+    }
 fetch("Ch.json")
   .then((response) => response.json())
   .then((data) => {
     channelsData = data;
     renderChannels(channelsData);
   })
-      loadStream(streams[0]); // Autoplay the first channel
-    }
-
     async function loadStream(channel) {
       const videoElement = document.getElementById("video");
       const youtubeElement = document.getElementById("youtube-video");
