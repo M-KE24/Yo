@@ -61,6 +61,23 @@ renderChannels(channelsData);
         youtubeEmbed.src = `${channel.embedUrl}&autoplay=1`;
       }
     }
+fetch("channels.json")
+  .then((response) => response.json())
+  .then((data) => {
+    channelsData = data;
+    renderChannels(channelsData);
+  })
+  .catch((error) => console.error("Error loading channels:", error));
+
+const searchInput = document.querySelector("#search");
+searchInput.addEventListener("input", (e) => {
+  const searchTerm = e.target.value.toLowerCase();
+  const filteredChannels = channelsData.filter((channel) => {
+    return channel.title.toLowerCase().includes(searchTerm) || channel.language.toLowerCase().includes(searchTerm);
+  });
+  renderChannels(filteredChannels);
+});
+
 
     function stopCurrentStream() {
       const videoElement = document.getElementById("video");
