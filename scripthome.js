@@ -1,27 +1,5 @@
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
-
-    
-  </style>
-</head>
-<body>
-  <div id="wrapper">
-    <div id="title">🄷🄾🄽🄾🅁 🅃🅅</div>
-    <div id="video-container">
-      <iframe id="youtube-video" allowfullscreen></iframe>
-      <video id="video" controls></video>
-    </div>
-
-    <div id="categories">
-      <!-- Categories will be generated dynamically -->
-    </div>
-
-    <div id="footer">
-      ENJOY WATCHING CABLE TV BY HONOR TV
-    </div>
-  </div>
-
-  <script>const streams = [
+  <script>
+	  const streams = [
       {
         name: 'TV5',
         logo: 'https://i.imgur.com/Ddyfzrn.png',
