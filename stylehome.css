@@ -200,8 +200,6 @@
 .rainbow-text .block-line > span {
     display: inline-block;
 }       
-  </style>
-<body>
   const streams = [
       {
         name: 'TV5',
