@@ -1,6 +1,28 @@
-const streams = 
-      [
-{
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+    
+  </style>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="title">🄷🄾🄽🄾🅁 🅃🅅</div>
+    <div id="video-container">
+      <iframe id="youtube-video" allowfullscreen></iframe>
+      <video id="video" controls></video>
+    </div>
+
+    <div id="categories">
+      <!-- Categories will be generated dynamically -->
+    </div>
+
+    <div id="footer">
+      ENJOY WATCHING CABLE TV BY HONOR TV
+    </div>
+  </div>
+
+  <script>const streams = [
+      {
         name: 'TV5',
         logo: 'https://i.imgur.com/Ddyfzrn.png',
         type: 'mpegdash',
@@ -719,16 +741,18 @@ name: 'ALLTV 2',
         type: 'hls',
         manifestUri: 'https://jungotvstream.chanall.tv/jungotv/hallypop/stream.m3u8',
         category: "Local"
-      }
+      },
 
-];
-const categories = [
+    
+    ];
+
+    const categories = [
       "Local", "Sports", "News", "Movies", "Kids", "Educational and Documentary", "Lifestyle"
     ];
-let player;
 
+    let player;
 
-function initializeUI() {
+    function initializeUI() {
       const categoriesContainer = document.getElementById("categories");
 
       categories.forEach(category => {
@@ -759,10 +783,10 @@ function initializeUI() {
           slider.appendChild(card);
         });
       });
+
       loadStream(streams[0]); // Autoplay the first channel
     }
-renderChannels(channelsData);
-  })
+
     async function loadStream(channel) {
       const videoElement = document.getElementById("video");
       const youtubeElement = document.getElementById("youtube-video");
@@ -802,5 +826,4 @@ renderChannels(channelsData);
     }
 
     document.addEventListener("DOMContentLoaded", initializeUI);
-
- </script>
+  </script>
