@@ -1,3 +1,6 @@
+</style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
 const channelList = document.querySelector(".channel-list");
 const video = document.querySelector("#player");
 const nowPlayingTitle = document.querySelector("#channel-playing");
