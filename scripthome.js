@@ -1,8 +1,4 @@
-     // For the Windows OS type the following command in cmd
-    "build": "set \"GENERATE_SOURCEMAP=false\" && react-scripts build"
-    
-    // For Linux OS
-    "build": "GENERATE_SOURCEMAP=false react-scripts build"
+
 
 
 const streams = [
