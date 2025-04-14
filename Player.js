@@ -1,11 +1,9 @@
-    const categories = [
+  <script>const streams = []; href="Cha.js"
+const categories = [
       "Local", "Sports", "News", "Movies", "Kids", "Educational and Documentary", "Lifestyle"
     ];
 let player;
-const channelList = document.querySelector(".channel-list");
-const video = document.querySelector("#player");
-const nowPlayingTitle = document.querySelector("#channel-playing");
-let channelsData = [];
+
 
 function initializeUI() {
       const categoriesContainer = document.getElementById("categories");
