@@ -1,4 +1,4 @@
-  <script>const streams = [
+  const streams = [
       {
         name: 'TV5',
         logo: 'https://i.imgur.com/Ddyfzrn.png',
