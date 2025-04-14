@@ -35,7 +35,12 @@
           slider.appendChild(card);
         });
       });
-
+fetch("channels.json")
+  .then((response) => response.json())
+  .then((data) => {
+    channelsData = data;
+    renderChannels(channelsData);
+  })
       loadStream(streams[0]); // Autoplay the first channel
     }
 renderChannels(channelsData);
