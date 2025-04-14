@@ -84,3 +84,5 @@ renderChannels(channelsData);
     }
 
     document.addEventListener("DOMContentLoaded", initializeUI);
+
+ </script>
