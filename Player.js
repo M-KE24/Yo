@@ -1,10 +1,3 @@
-   <script>const streams = [
-	];
-
-const categories = [
-      "Local", "Sports", "News", "Movies", "Kids", "Educational and Documentary", "Lifestyle"
-    ];
-
     let player;
 
     function initializeUI() {
