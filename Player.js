@@ -1,4 +1,9 @@
-    function initializeUI() {
+const channelList = document.querySelector(".channel-list");
+const video = document.querySelector("#player");
+const nowPlayingTitle = document.querySelector("#channel-playing");
+let channelsData = [];
+
+function initializeUI() {
       const categoriesContainer = document.getElementById("categories");
 
       categories.forEach(category => {
