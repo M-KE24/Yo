@@ -1,4 +1,4 @@
-  <script>const streams = []; href="Cha.js"
+const streams = []; href="Cha.js"
 const categories = [
       "Local", "Sports", "News", "Movies", "Kids", "Educational and Documentary", "Lifestyle"
     ];
