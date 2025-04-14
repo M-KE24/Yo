@@ -61,7 +61,7 @@ renderChannels(channelsData);
         youtubeEmbed.src = `${channel.embedUrl}&autoplay=1`;
       }
     }
-fetch("channels.json")
+fetch("Cha.js")
   .then((response) => response.json())
   .then((data) => {
     channelsData = data;
