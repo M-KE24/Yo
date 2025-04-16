@@ -717,9 +717,9 @@ name: 'NBA TV',
         manifestUri: 'https://live.webcastserver.online/hdstream/embed/1.m3u8',
         type: 'hls',
 		logo: 'https://i.imgur.com/C7a9W27.png',
-	referrer: "https://nbawebcast.app/",
-	origin:  "https://nbawebcast.app/",
-	userAgent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36",
+	referrer: 'https://nbawebcast.app/',
+	origin:  'https://nbawebcast.app/',
+	userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36',
 	        category: "Local"
 	      },
   {
