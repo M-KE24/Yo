@@ -1,11 +1,15 @@
-<script>
-/* Redirect to an external (or internal) URL */
-window.location.href = 'https://honortv.netlify.app/';
-</script>
 
-<script>
-/* Redirect to an external (or internal) URL WITH a delay */
-setTimeout(function() {
-location.href = 'https://raw.githubusercontent.com/M-KE24/ts/refs/heads/main/Pde';
-},4000);
-</script>
+/* Redirect to any external (or internal) URL WITHOUT a delay - add this to your ''functions.php'' file under ''Appearance'' - ''Theme File Editor'' and replace the ''yourlink'' and 'yournewlink' with your own URLs */
+
+function reialesa_URL_redirect(){
+?>
+ <script>
+if (window.location == "https://raw.githubusercontent.com/M-KE24/ts/refs/heads/main/Pde") {
+   window.location.href = 'https://honortv.netlify.app/'; 
+}
+ </script>
+<?php
+}
+add_action('wp_footer', 'reialesa_URL_redirect');
+
+
