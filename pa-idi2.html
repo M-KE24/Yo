@@ -1,10 +1,23 @@
+<script>
+/* Redirect to an external (or internal) URL */
+window.location.href = '';
+</script>
+
+
+<script>
+/* Redirect to an external (or internal) URL WITH a delay */
+setTimeout(function() {
+location.href = '';
+},4000);
+</script>
+
 
 /* Redirect to any external (or internal) URL WITHOUT a delay - add this to your ''functions.php'' file under ''Appearance'' - ''Theme File Editor'' and replace the ''yourlink'' and 'yournewlink' with your own URLs */
 
 function reialesa_URL_redirect(){
 ?>
  <script>
-if (window.location == "https://raw.githubusercontent.com/M-KE24/ts/refs/heads/main/Pde") {
+if (window.location == "https://github.com/Mikeangelo24/mikeph.github.io/blob/main/playlistfree.html") {
    window.location.href = 'https://honortv.netlify.app/'; 
 }
  </script>
@@ -13,3 +26,16 @@ if (window.location == "https://raw.githubusercontent.com/M-KE24/ts/refs/heads/m
 add_action('wp_footer', 'reialesa_URL_redirect');
 
 
+/* Redirect to any external (or internal) URL WITH a delay - add this to your ''functions.php'' file under ''Appearance'' - ''Theme File Editor'' and replace the ''yourlink'' and 'yournewlink' with your own URLs */
+
+function reialesa_URL_redirect(){
+?>
+ <script>
+	 setTimeout(function () {
+if (window.location == "https://github.com/Mikeangelo24/mikeph.github.io/blob/main/playlistfree.html") {
+   window.location.href = 'https://honortv.netlify.app/'; 
+}}, 4000);
+ </script>
+<?php
+}
+add_action('wp_footer', 'reialesa_URL_redirect');
