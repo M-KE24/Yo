@@ -6,6 +6,29 @@
 https://zekonew.newkso.ru/zeko/premium375/mono.m3u8
 
 
+
+#EXTINF:-1 tvg-id="" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-VacP9Acsdku8axt_g6bIogmi7Zf5wE5D-AM3hwbHvuItM3N6s-w0Bsc&s=10" group-title="  🇵🇭 CABLE PPV | UFC 🥊 🏆", Boxing - Naoya Inoue vs Ramon Cardenas 10 5/5/25
+#EXTVLCOPT:http-origin=https://topembed.pw
+#EXTVLCOPT:http-referrer=https://topembed.pw/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Android 14; Mobile; rv:138.0) Gecko/138.0 Firefox/138.0
+https://azonew.newkso.ru/azo/eplayerskymain2/mono.m3u8
+
+
+Host:azonew.newkso.ru
+User-Agent:Mozilla/5.0 (Android 14; Mobile; rv:138.0) Gecko/138.0 Firefox/138.0
+Accept:*/*
+Accept-Language:en-US
+Accept-Encoding:gzip, deflate, br, zstd
+Origin:https://topembed.pw
+Connection:keep-alive
+Referer:https://topembed.pw/
+Sec-Fetch-Dest:empty
+Sec-Fetch-Mode:cors
+Sec-Fetch-Site:cross-site
+
+
+
+
 Host:zekonew.newkso.ru
 User-Agent:Mozilla/5.0 (Android 14; Mobile; rv:138.0) Gecko/138.0 Firefox/138.0
 Accept:*/*
