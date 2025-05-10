@@ -1,0 +1,7 @@
+#EXTM3U
+
+#EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIRPTifi90w-PiZyUd1v_SsiwpzcELXjAPUY3mB0BLsipfEZR1yglKmfw&s=10" group-title="🏀 NBA LEAGUE PASS S0",Emanuel Navarrete vs Charly Suarez
+#EXTVLCOPT:http-origin=https://newzar.xyz/
+#EXTVLCOPT:http-referrer=https://newzar.xyz
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (iPhone; CPU iPhone OS 17_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Mobile/15E148 Safari/604.1
+http://xtream-ie.org:80/live/HONORTV/bshsrhthrh/5526.m3u8?token-74557929848493866290570387739747983777493874893783982773837737483737383948939377384939292876355265278399
