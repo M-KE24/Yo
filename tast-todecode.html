@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CDRM-Extension Mike PH</title>
+  <link rel="icon" href="https://cdrm-project.com/favico.png">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Press Start 2P', cursive;
+      background: radial-gradient(circle at top, #1e3c72, #2a5298);
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 0 1rem;
+      overflow: hidden;
+      position: relative;
+    }
+    .container {
+      background: rgba(0, 0, 0, 0.65);
+      backdrop-filter: blur(10px);
+      padding: 3rem 2rem;
+      border-radius: 20px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.6);
+      text-align: center;
+      width: 100%;
+      max-width: 450px;
+      animation: float 3s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    h1 {
+      font-size: 18px;
+      margin-bottom: 1.5rem;
+    }
+    input, button {
+      width: 100%;
+      margin-top: 1rem;
+      padding: 12px;
+      border: none;
+      border-radius: 10px;
+      font-size: 12px;
+      font-family: 'Press Start 2P', cursive;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+    input {
+      color: black;
+      background: #ffffff;
+    }
+    button {
+      background: linear-gradient(135deg, #00c853, #b2ff59);
+      color: #000;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.3s;
+    }
+    button:hover {
+      background: linear-gradient(135deg, #64dd17, #aeea00);
+      transform: scale(1.05);
+    }
+    .responseBox {
+      position: fixed;
+      top: 10%;
+      right: 10%;
+      background: rgba(0, 0, 0, 0.75);
+      padding: 1rem;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+      z-index: 999;
+      animation: float 2s ease-in-out infinite;
+      max-width: 300px;
+      word-break: break-word;
+    }
+    .responseBox p {
+      font-size: 10px;
+      margin-bottom: 10px;
+    }
+    .copyBtn {
+      width: 100%;
+      padding: 8px;
+      font-size: 10px;
+      margin-top: 5px;
+      cursor: pointer;
+      background: linear-gradient(135deg, #ffc107, #ff9800);
+      color: #000;
+      border: none;
+      border-radius: 8px;
+      font-family: 'Press Start 2P', cursive;
+    }
+    .copyBtn:hover {
+      background: linear-gradient(135deg, #ffb300, #ff6f00);
+    }
+    @media(max-width: 480px){
+      h1 {
+        font-size: 14px;
+      }
+      input, button {
+        font-size: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>CDRM Extension - Mike PH</h1>
+    <input type="text" id="psshInput" placeholder="Enter PSSH Here">
+    <input type="text" id="licurlInput" placeholder="Enter License URL Here">
+    <button id="decryptButton">Decrypt</button>
+  </div>
+
+  <div id="responseContainer"></div>
+
+<script>
+// EXTREME DevTools Detection
+(function() {
+  let devtools = { open: false };
+  
+  const threshold = 160;
+
+  const detectDevTools = () => {
+    const widthThreshold = window.outerWidth - window.innerWidth > threshold;
+    const heightThreshold = window.outerHeight - window.innerHeight > threshold;
+    if (widthThreshold || heightThreshold) {
+      devtools.open = true;
+    }
+  };
+
+  setInterval(detectDevTools, 300);
+
+  const element = new Image();
+  Object.defineProperty(element, 'id', {
+    get: function () {
+      devtools.open = true;
+      throw new Error("DevTools Detected");
+    }
+  });
+
+  const check = () => {
+    console.dir(element);
+    if (devtools.open) {
+      document.body.innerHTML = "";  
+      location.href = "https://google.com";  // You can change to your safe page
+    }
+  };
+
+  setInterval(check, 500);
+})();
+
+function decodeBase64(encoded) {
+  return atob(encoded);
+}
+
+function displayResponse(message) {
+  const container = document.getElementById('responseContainer');
+  container.innerHTML = `
+    <div class="responseBox">
+      <p>${message}</p>
+      <button class="copyBtn" onclick="copyResponse('${message.replace(/'/g,"\\'")}')">Copy</button>
+    </div>
+  `;
+}
+
+function copyResponse(text) {
+  navigator.clipboard.writeText(text).then(() => {
+    alert('Copied to clipboard!');
+  }).catch(err => {
+    console.error('Copy failed', err);
+    alert('Copy failed. Check console.');
+  });
+}
+
+document.getElementById('decryptButton').addEventListener('click', () => {
+  const pssh = document.getElementById('psshInput').value.trim();
+  const licurl = document.getElementById('licurlInput').value.trim();
+  
+  if (!pssh || !licurl) {
+    alert('Please enter both PSSH and License URL.');
+    return;
+  }
+  
+  const payload = {
+    pssh: pssh,
+    licurl: licurl,
+    headers: JSON.stringify({
+      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:134.0) Gecko/20100101 Firefox/134.0'
+    })
+  };
+
+  const encodedApiUrl = "aHR0cHM6Ly9jZHJtLXByb2plY3QuY29tL2FwaS9kZWNyeXB0"; 
+  const apiUrl = decodeBase64(encodedApiUrl);
+
+  fetch(apiUrl, {
+    method: 'POST',
+    mode: 'cors',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(payload)
+  })
+  .then(res => res.json())
+  .then(response => {
+    displayResponse(response.message);
+  })
+  .catch(err => {
+    console.error('Request Failed', err);
+    alert('Request Failed: Check Console.');
+  });
+});
+</script>
+
+</body>
+</html>
